@@ -1,0 +1,6 @@
+interface:
+  display_name: "Grill My Design"
+  short_description: "Stress-test designs using my engineering principles"
+  default_prompt: "Use $grill-my-design to challenge this design one decision at a time."
+policy:
+  allow_implicit_invocation: false

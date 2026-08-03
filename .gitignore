@@ -1,0 +1,4 @@
+backups/
+config/deployment-state.json
+config/upstream-update-report.md
+*.tmp

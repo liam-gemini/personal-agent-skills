@@ -1,0 +1,21 @@
+{
+  "upstream": {
+    "path": "upstream/mattpocock-skills",
+    "skillsPath": "upstream/mattpocock-skills/skills",
+    "includeAll": true,
+    "pinnedCommit": "2ab958093e83e0ec752e6c1c5932da465bf23e0c"
+  },
+  "personal": {
+    "skillsPath": "skills",
+    "names": [
+      "my-engineering",
+      "grill-my-design",
+      "personal-engineering-principles",
+      "evolve-my-skills"
+    ]
+  },
+  "deployment": {
+    "codexSkillsPath": "C:/Users/16477/.codex/skills",
+    "backupPath": "backups"
+  }
+}

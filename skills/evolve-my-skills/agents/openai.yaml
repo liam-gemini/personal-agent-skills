@@ -1,0 +1,6 @@
+interface:
+  display_name: "Evolve My Skills"
+  short_description: "Turn interaction lessons into reviewed skill improvements"
+  default_prompt: "Use $evolve-my-skills to review this interaction and propose reusable skill improvements."
+policy:
+  allow_implicit_invocation: false
