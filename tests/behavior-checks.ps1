@@ -19,6 +19,8 @@ function Assert-Equal {
 Assert-Contains 'AGENTS.md' 'Treat `skills/` as the source of truth' 'Repository instructions must identify the personal skill source of truth.'
 Assert-Contains 'AGENTS.md' 'Do not edit it directly or update it as part of unrelated work' 'Repository instructions must protect the upstream submodule.'
 Assert-Contains 'AGENTS.md' 'Do not commit, push, deploy.*unless the user explicitly requests' 'Repository instructions must preserve user control over external changes.'
+Assert-Contains 'AGENTS.md' 'Surface material assumptions and ambiguities' 'Repository instructions must surface material uncertainty.'
+Assert-Contains 'AGENTS.md' 'Match process depth to task complexity' 'Repository instructions must keep simple interactions lightweight.'
 Assert-Contains 'AGENTS.md' 'Apply `\$karpathy-guidelines` when writing, reviewing, or refactoring code' 'Repository code work must apply karpathy-guidelines.'
 Assert-Contains 'skills\grill-my-design\SKILL.md' 'Ask exactly one decision question per turn' 'grill-my-design must ask one decision at a time.'
 Assert-Contains 'skills\grill-my-design\SKILL.md' 'Do not implement until the user explicitly confirms' 'grill-my-design must wait for shared understanding.'

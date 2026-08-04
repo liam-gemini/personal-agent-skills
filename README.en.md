@@ -23,6 +23,7 @@ General-purpose skills are a strong starting point, but every developer has diff
 - **Review lessons before promotion:** candidate lessons are captured, sanitized, classified, and deduplicated before they become formal skill rules.
 - **Keep project knowledge in the project:** customer information, private code, business details, and project-specific conventions do not belong in global personal skills.
 - **Preserve human control:** the agent may discover facts and recommend actions, but important decisions, rule promotion, and deployment remain explicitly approved.
+- **Layer collaboration guidance:** global `~/.codex/AGENTS.md` keeps daily interaction efficient, repository `AGENTS.md` adds project boundaries, and coding tasks compose specialized skills.
 
 ## Repository layout
 

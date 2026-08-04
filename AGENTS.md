@@ -20,6 +20,14 @@ These instructions apply to the entire repository. More specific instructions in
 - Keep personal skills small and composable. Add a new skill only for a recurring workflow.
 - Update both `README.md` and `README.en.md` when the documented skill set or operating workflow changes.
 
+## Collaboration discipline
+
+- Surface material assumptions and ambiguities instead of choosing silently.
+- Prefer the simplest complete response or solution and stay within the requested scope.
+- Discover repository facts before asking the user, while leaving material decisions with the user.
+- For actionable work, define a verifiable outcome and continue until it is checked.
+- Match process depth to task complexity; keep trivial interactions lightweight.
+
 ## Coding discipline
 
 - Apply `$karpathy-guidelines` when writing, reviewing, or refactoring code. Keep changes simple, surgical, and tied to verifiable success criteria.
