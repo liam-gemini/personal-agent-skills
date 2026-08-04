@@ -28,6 +28,7 @@
 
 ```text
 personal-agent-skills/
+├── AGENTS.md                       # Codex 在本仓库中的持久操作规则
 ├── skills/                         # 我维护的个人 Skills（源码）
 │   ├── my-engineering/             # 日常工程任务的统一入口与路由
 │   ├── grill-my-design/            # 个性化的软件设计追问与压力测试

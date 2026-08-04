@@ -28,6 +28,7 @@ General-purpose skills are a strong starting point, but every developer has diff
 
 ```text
 personal-agent-skills/
+├── AGENTS.md                       # Persistent Codex instructions for this repository
 ├── skills/                         # Personal skill source maintained here
 │   ├── my-engineering/             # Entry point and router for daily engineering
 │   ├── grill-my-design/            # Personalized design interrogation
