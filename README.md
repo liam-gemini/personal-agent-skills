@@ -37,7 +37,7 @@ personal-agent-skills/
 │   └── evolve-my-skills/           # 从经验教训中审核并演化 Skills
 ├── upstream/mattpocock-skills/     # 固定版本的上游 Git submodule
 ├── config/skills.json              # 上游版本、个人 Skills 和部署位置
-├── lessons/                        # 待审核的经验候选
+├── lessons/                        # 经验候选与已晋升规则的生命周期记录
 ├── scripts/                        # 创建、验证、部署、更新和回滚工具
 ├── tests/                          # 行为场景与检查脚本
 └── backups/                        # 部署前备份（本地生成，不提交）
@@ -154,6 +154,8 @@ C:/Users/<用户名>/.codex/skills
 - 尚未验证、只是假设未来会需要的复杂机制。
 
 需要复盘时，可以在 Codex 中明确调用 `$evolve-my-skills`。候选项记录在 [`lessons/candidates.md`](./lessons/candidates.md)，正式修改必须经过确认。
+
+经确认晋升的重要规则会登记在 [`lessons/rules.md`](./lessons/rules.md)，记录其来源、适用范围、目标 Skill、状态、最后验证日期以及替代或退役原因。正式 Skill 仍是可执行规则的事实来源，登记表负责保留决策历史。
 
 ## 更新上游 Skills
 

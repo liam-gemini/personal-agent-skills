@@ -37,7 +37,7 @@ personal-agent-skills/
 │   └── evolve-my-skills/           # Reviewed learning from experience
 ├── upstream/mattpocock-skills/     # Pinned upstream Git submodule
 ├── config/skills.json              # Upstream version, skill set, deployment target
-├── lessons/                        # Candidate lessons awaiting review
+├── lessons/                        # Candidate lessons and promoted-rule lifecycle records
 ├── scripts/                        # Creation, validation, deployment, update, rollback
 ├── tests/                          # Behavioral scenarios and checks
 └── backups/                        # Local pre-deployment backups; not committed
@@ -154,6 +154,8 @@ Poor candidates for global rules include:
 - Unvalidated complexity added for hypothetical future needs.
 
 When a retrospective is warranted, explicitly invoke `$evolve-my-skills` in Codex. Candidates are recorded in [`lessons/candidates.md`](./lessons/candidates.md), and formal changes require approval.
+
+Important approved rules are registered in [`lessons/rules.md`](./lessons/rules.md), including their source, scope, target skill, status, last validation date, and replacement or retirement reason. Formal skills remain the executable source of truth; the registry preserves decision history.
 
 ## Update upstream skills
 

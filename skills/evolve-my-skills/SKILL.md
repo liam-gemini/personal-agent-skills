@@ -7,7 +7,7 @@ description: Convert explicit interaction feedback, repeated failures, high-cost
 
 Maintain the source repository at `C:\Users\16477\Documents\personal-agent-skills`. Never edit installed copies under `.codex\skills` as the source of truth.
 
-Read [lesson-policy.md](references/lesson-policy.md) and [lesson-format.md](references/lesson-format.md).
+Read [lesson-policy.md](references/lesson-policy.md), [lesson-format.md](references/lesson-format.md), and [rule-lifecycle.md](references/rule-lifecycle.md).
 
 ## Capture
 
@@ -35,9 +35,15 @@ Do not modify a formal skill until the user explicitly approves the proposed rul
 After approval:
 
 1. Edit the source skill, not the installed copy.
-2. Mark the candidate as promoted, rejected, or project-local with a short reason.
-3. Run `scripts/validate.ps1` and `tests/behavior-checks.ps1` from the repository root.
-4. Show the resulting diff.
-5. Ask before committing or deploying.
+2. Mark the candidate as promoted, rejected, or project-local with its resolution.
+3. For a promoted important rule, add an `active` entry to `lessons/rules.md` using a stable Rule ID.
+4. Run `scripts/validate.ps1` and `tests/behavior-checks.ps1` from the repository root.
+5. Record the validation date only after both checks pass.
+6. Show the resulting diff.
+7. Ask before committing or deploying.
+
+## Retire
+
+Do not deprecate or supersede a registered rule without explicit user approval. Update the executable rule and its registry entry together, preserve the reason and replacement link, then run the same validation checks.
 
 Never update the mattpocock submodule as part of lesson promotion.
