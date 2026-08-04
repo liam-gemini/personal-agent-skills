@@ -1,6 +1,6 @@
 interface:
   display_name: "My Engineering"
-  short_description: "Route daily engineering work through personal workflows"
-  default_prompt: "Use $my-engineering to choose and run the right workflow for this engineering task."
+  short_description: "Run my adaptive end-to-end engineering workflow"
+  default_prompt: "Use $my-engineering to take this engineering task from orientation through verified delivery."
 policy:
   allow_implicit_invocation: false

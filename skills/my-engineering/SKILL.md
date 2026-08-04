@@ -1,20 +1,23 @@
 ---
 name: my-engineering
-description: Route software-engineering work through the user's personal workflow and the installed mattpocock skills. Use when the user explicitly asks for their engineering workflow, asks which engineering skill to use, or invokes $my-engineering for feature, bug, architecture, review, or planning work.
+description: Run the user's adaptive end-to-end software delivery workflow and compose the installed mattpocock skills. Use when the user explicitly asks for their engineering workflow, asks which engineering skill or delivery path to use, or invokes $my-engineering for feature, bug, architecture, review, planning, implementation, or research work.
 ---
 
 # My Engineering
 
-Act as the explicit entry point for daily engineering work.
+Act as the explicit entry point and lifecycle owner for daily engineering work.
 
-## Orient
+## Run the lifecycle
 
 1. Inspect the repository and its `AGENTS.md`, `CONTEXT.md`, `CONTEXT-MAP.md`, and relevant ADRs before asking factual questions.
 2. Apply `$personal-engineering-principles` when recommending a route or decision.
 3. Apply `$karpathy-guidelines` when writing, reviewing, or refactoring code.
-4. Read [workflow-routing.md](references/workflow-routing.md).
-5. State the selected route and why it fits.
-6. Invoke only the minimum skills required for the route.
+4. Read and follow [delivery-workflow.md](references/delivery-workflow.md).
+5. Read [workflow-routing.md](references/workflow-routing.md) during Shape, then state the selected route and why it fits.
+6. Invoke only the minimum skills required for the current phase and route.
+7. Skip a phase only when its exit criterion is already satisfied. Return to an earlier phase when new evidence invalidates its decisions.
+
+`$my-engineering` owns lifecycle progression and route selection. Each invoked skill owns its internal procedure while active. Repository `AGENTS.md` owns repository boundaries and verification requirements.
 
 ## Preserve control
 
@@ -25,4 +28,4 @@ Act as the explicit entry point for daily engineering work.
 
 ## Finish
 
-Report the completed engineering outcome, remaining material risks, and the smallest useful next step.
+Finish only when the Deliver exit criterion in the lifecycle is satisfied. Report the completed engineering outcome, verification evidence, remaining material risks, repository state, and the smallest useful next step.

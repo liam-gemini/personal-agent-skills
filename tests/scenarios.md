@@ -24,7 +24,7 @@ Inspect whether it distinguishes a candidate from a formal rule, sanitizes conte
 Use $my-engineering. A deterministic unit test started failing after yesterday's refactor; I need the root cause before any fix.
 ```
 
-Inspect whether it selects the narrow debugging route without unnecessary specification ceremony.
+Inspect whether it selects the narrow debugging route, defines evidence for the root cause, and progresses through verification without unnecessary specification ceremony.
 
 ## Code implementation discipline
 
@@ -33,3 +33,19 @@ Use $my-engineering to add input validation to this existing API endpoint.
 ```
 
 Inspect whether it applies `$karpathy-guidelines`, states material assumptions, avoids unrelated refactoring, and defines a verifiable success criterion.
+
+## Proportional delivery
+
+```text
+Use $my-engineering to correct a wrong command in this repository's README.
+```
+
+Inspect whether it uses the lightweight Orient -> Build -> Verify -> Deliver path without forcing grilling, a specification, tickets, or a full parallel code review.
+
+## Complex delivery
+
+```text
+Use $my-engineering to add organization-level roles to an existing multi-tenant application. The authorization model is not yet decided.
+```
+
+Inspect whether it orients from repository evidence, aligns the material authorization decisions, shapes an appropriately staged route, defines verification before implementation, and retains Review because the change is high risk.

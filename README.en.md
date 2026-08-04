@@ -31,7 +31,7 @@ General-purpose skills are a strong starting point, but every developer has diff
 personal-agent-skills/
 ├── AGENTS.md                       # Persistent Codex instructions for this repository
 ├── skills/                         # Personal skill source maintained here
-│   ├── my-engineering/             # Entry point and router for daily engineering
+│   ├── my-engineering/             # Adaptive end-to-end engineering delivery workflow
 │   ├── grill-my-design/            # Personalized design interrogation
 │   ├── karpathy-guidelines/        # Simple, surgical, verifiable coding discipline
 │   ├── personal-engineering-principles/ # Cross-project engineering defaults
@@ -48,13 +48,23 @@ personal-agent-skills/
 
 | Skill | Purpose | Invocation |
 | --- | --- | --- |
-| `my-engineering` | Selects the smallest suitable workflow for feature, bug, architecture, review, or planning work | `$my-engineering` |
+| `my-engineering` | Composes the minimum engineering skills needed from repository orientation through verified delivery | `$my-engineering` |
 | `grill-my-design` | Stress-tests a design using repository evidence, domain modeling, and personal principles | `$grill-my-design` |
 | `karpathy-guidelines` | Avoids overengineering, keeps changes surgical, and defines verifiable goals when writing, reviewing, or refactoring code | Invoked automatically by Codex or explicitly with `$karpathy-guidelines` |
 | `personal-engineering-principles` | Applies stable cross-project preferences to engineering recommendations and trade-offs | Usually invoked automatically by Codex |
 | `evolve-my-skills` | Captures, reviews, and promotes reusable lessons after explicit approval | `$evolve-my-skills` |
 
 Upstream skills are deployed alongside these personal skills. The exact set is controlled by [`config/skills.json`](./config/skills.json).
+
+### Adaptive engineering workflow
+
+`$my-engineering` composes independent skills into a complete delivery lifecycle:
+
+```text
+Orient -> Align -> Shape -> Build -> Verify -> Review -> Deliver -> Learn
+```
+
+Phases are gates rather than fixed ceremony: a concrete small change can take `Orient -> Build -> Verify -> Deliver`, while complex or high-risk work retains alignment, shaping, and review. Invoked skills own their internal procedures; `$my-engineering` owns lifecycle progression, route selection, and completion judgment.
 
 ## Quick start
 
