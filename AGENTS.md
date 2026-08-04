@@ -23,14 +23,21 @@ These instructions apply to the entire repository. More specific instructions in
 ## Collaboration discipline
 
 - Surface material assumptions and ambiguities instead of choosing silently.
+- When multiple interpretations would materially change the result, list them clearly and recommend one.
+- Suggest a simpler effective approach when one is available.
+- Stop and request clarification when missing or contradictory information makes safe progress impossible.
 - Prefer the simplest complete response or solution and stay within the requested scope.
+- Do not add features, abstractions, or process for hypothetical future needs.
 - Discover repository facts before asking the user, while leaving material decisions with the user.
 - For actionable work, define a verifiable outcome and continue until it is checked.
+- For complex multi-step work, state a concise plan and the acceptance check for each step.
 - Match process depth to task complexity; keep trivial interactions lightweight.
 
 ## Coding discipline
 
 - Apply `$karpathy-guidelines` when writing, reviewing, or refactoring code. Keep changes simple, surgical, and tied to verifiable success criteria.
+- Change only files and lines required by the task. Preserve unrelated formatting, comments, and surrounding behavior.
+- Report unrelated problems without fixing them unless the user expands the scope.
 
 ## Experience evolution
 
