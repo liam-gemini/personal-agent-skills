@@ -20,6 +20,10 @@ These instructions apply to the entire repository. More specific instructions in
 - Keep personal skills small and composable. Add a new skill only for a recurring workflow.
 - Update both `README.md` and `README.en.md` when the documented skill set or operating workflow changes.
 
+## Coding discipline
+
+- Apply `$karpathy-guidelines` when writing, reviewing, or refactoring code. Keep changes simple, surgical, and tied to verifiable success criteria.
+
 ## Experience evolution
 
 - Use `skills/evolve-my-skills/` for changes derived from feedback or lessons.
