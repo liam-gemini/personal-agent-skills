@@ -31,6 +31,7 @@ personal-agent-skills/
 ├── skills/                         # Personal skill source maintained here
 │   ├── my-engineering/             # Entry point and router for daily engineering
 │   ├── grill-my-design/            # Personalized design interrogation
+│   ├── karpathy-guidelines/        # Simple, surgical, verifiable coding discipline
 │   ├── personal-engineering-principles/ # Cross-project engineering defaults
 │   └── evolve-my-skills/           # Reviewed learning from experience
 ├── upstream/mattpocock-skills/     # Pinned upstream Git submodule
@@ -47,6 +48,7 @@ personal-agent-skills/
 | --- | --- | --- |
 | `my-engineering` | Selects the smallest suitable workflow for feature, bug, architecture, review, or planning work | `$my-engineering` |
 | `grill-my-design` | Stress-tests a design using repository evidence, domain modeling, and personal principles | `$grill-my-design` |
+| `karpathy-guidelines` | Avoids overengineering, keeps changes surgical, and defines verifiable goals when writing, reviewing, or refactoring code | Invoked automatically by Codex or explicitly with `$karpathy-guidelines` |
 | `personal-engineering-principles` | Applies stable cross-project preferences to engineering recommendations and trade-offs | Usually invoked automatically by Codex |
 | `evolve-my-skills` | Captures, reviews, and promotes reusable lessons after explicit approval | `$evolve-my-skills` |
 

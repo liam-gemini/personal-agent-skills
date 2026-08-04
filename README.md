@@ -31,6 +31,7 @@ personal-agent-skills/
 ├── skills/                         # 我维护的个人 Skills（源码）
 │   ├── my-engineering/             # 日常工程任务的统一入口与路由
 │   ├── grill-my-design/            # 个性化的软件设计追问与压力测试
+│   ├── karpathy-guidelines/        # 简洁、克制、可验证的代码实现准则
 │   ├── personal-engineering-principles/ # 跨项目工程原则
 │   └── evolve-my-skills/           # 从经验教训中审核并演化 Skills
 ├── upstream/mattpocock-skills/     # 固定版本的上游 Git submodule
@@ -47,6 +48,7 @@ personal-agent-skills/
 | --- | --- | --- |
 | `my-engineering` | 根据功能开发、排错、架构、评审或规划任务选择最小必要工作流 | `$my-engineering` |
 | `grill-my-design` | 基于仓库证据、领域建模和个人原则追问并检验设计 | `$grill-my-design` |
+| `karpathy-guidelines` | 在编写、评审或重构代码时避免过度设计，保持改动聚焦并定义可验证目标 | 由 Codex 自动调用，也可使用 `$karpathy-guidelines` |
 | `personal-engineering-principles` | 在工程建议和权衡中自动应用稳定的跨项目偏好 | 通常由 Codex 自动调用 |
 | `evolve-my-skills` | 捕获、审核并在确认后晋升可复用的经验教训 | `$evolve-my-skills` |
 

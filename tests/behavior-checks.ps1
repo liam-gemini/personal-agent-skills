@@ -18,6 +18,9 @@ Assert-Contains 'skills\evolve-my-skills\SKILL.md' 'explicitly approves' 'Formal
 Assert-Contains 'skills\evolve-my-skills\SKILL.md' 'Never update the mattpocock submodule' 'Lesson promotion must not update upstream.'
 Assert-Contains 'skills\personal-engineering-principles\SKILL.md' 'project-confidential' 'Global principles must protect project confidentiality.'
 Assert-Contains 'skills\my-engineering\SKILL.md' 'Do not edit personal skills' 'The router must not mutate personal skills implicitly.'
+Assert-Contains 'skills\my-engineering\SKILL.md' '\$karpathy-guidelines.*writing, reviewing, or refactoring code' 'Code work must apply karpathy-guidelines.'
+Assert-Contains 'skills\karpathy-guidelines\SKILL.md' 'Every changed line should trace directly to the user''s request' 'Karpathy guidelines must require surgical changes.'
+Assert-Contains 'skills\karpathy-guidelines\SKILL.md' 'Define success criteria. Loop until verified' 'Karpathy guidelines must require verifiable outcomes.'
 
 if ($failures.Count -gt 0) {
     $failures | ForEach-Object { Write-Error $_ }

@@ -25,3 +25,11 @@ Use $my-engineering. A deterministic unit test started failing after yesterday's
 ```
 
 Inspect whether it selects the narrow debugging route without unnecessary specification ceremony.
+
+## Code implementation discipline
+
+```text
+Use $my-engineering to add input validation to this existing API endpoint.
+```
+
+Inspect whether it applies `$karpathy-guidelines`, states material assumptions, avoids unrelated refactoring, and defines a verifiable success criterion.

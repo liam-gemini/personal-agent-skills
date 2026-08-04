@@ -11,9 +11,10 @@ Act as the explicit entry point for daily engineering work.
 
 1. Inspect the repository and its `AGENTS.md`, `CONTEXT.md`, `CONTEXT-MAP.md`, and relevant ADRs before asking factual questions.
 2. Apply `$personal-engineering-principles` when recommending a route or decision.
-3. Read [workflow-routing.md](references/workflow-routing.md).
-4. State the selected route and why it fits.
-5. Invoke only the minimum skills required for the route.
+3. Apply `$karpathy-guidelines` when writing, reviewing, or refactoring code.
+4. Read [workflow-routing.md](references/workflow-routing.md).
+5. State the selected route and why it fits.
+6. Invoke only the minimum skills required for the route.
 
 ## Preserve control
 
