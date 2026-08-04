@@ -17,6 +17,7 @@ if (-not $Backup -or -not (Test-Path -LiteralPath (Join-Path $Backup 'backup-ind
 }
 
 $index = Get-Content -Raw -Encoding utf8 -LiteralPath (Join-Path $Backup 'backup-index.json') | ConvertFrom-Json
+Assert-CodexSkillsPath -Target $index.destinationRoot
 Write-Output "Rollback source: $Backup"
 Write-Output "Affected skills: $($index.touchedNames -join ', ')"
 if (-not $Apply) {

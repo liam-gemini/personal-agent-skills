@@ -5,12 +5,8 @@ param([switch]$Apply)
 
 $root = Get-RepositoryRoot
 $config = Get-SkillsConfig
-$destinationRoot = [System.IO.Path]::GetFullPath($config.deployment.codexSkillsPath)
-$expectedParent = Join-Path $env:USERPROFILE '.codex'
-if ((Split-Path $destinationRoot -Leaf) -ne 'skills' -or
-    [System.IO.Path]::GetFullPath((Split-Path $destinationRoot -Parent)).TrimEnd('\') -ne [System.IO.Path]::GetFullPath($expectedParent).TrimEnd('\')) {
-    throw "Refusing to deploy outside the configured Codex skills directory: $destinationRoot"
-}
+$destinationRoot = Get-CodexSkillsPath
+Assert-CodexSkillsPath -Target $destinationRoot
 
 & (Join-Path $PSScriptRoot 'validate.ps1')
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

@@ -10,6 +10,29 @@ function Get-SkillsConfig {
     return Get-Content -Raw -Encoding utf8 -LiteralPath $configPath | ConvertFrom-Json
 }
 
+function Get-CodexHomePath {
+    $path = if ($env:CODEX_HOME) {
+        $env:CODEX_HOME
+    } else {
+        Join-Path $env:USERPROFILE '.codex'
+    }
+    return [System.IO.Path]::GetFullPath($path)
+}
+
+function Get-CodexSkillsPath {
+    return [System.IO.Path]::GetFullPath((Join-Path (Get-CodexHomePath) 'skills'))
+}
+
+function Assert-CodexSkillsPath {
+    param([Parameter(Mandatory)][string]$Target)
+
+    $expected = (Get-CodexSkillsPath).TrimEnd('\')
+    $actual = [System.IO.Path]::GetFullPath($Target).TrimEnd('\')
+    if ($actual -ne $expected) {
+        throw "Refusing operation outside the active Codex skills directory: $actual"
+    }
+}
+
 function Get-SkillName {
     param([Parameter(Mandatory)][string]$SkillDirectory)
 

@@ -11,6 +11,11 @@ function Assert-Contains {
     if ($content -notmatch $Pattern) { $failures.Add($Message) }
 }
 
+function Assert-Equal {
+    param([string]$Actual, [string]$Expected, [string]$Message)
+    if ($Actual -ne $Expected) { $failures.Add("$Message Expected: $Expected. Actual: $Actual.") }
+}
+
 Assert-Contains 'AGENTS.md' 'Treat `skills/` as the source of truth' 'Repository instructions must identify the personal skill source of truth.'
 Assert-Contains 'AGENTS.md' 'Do not edit it directly or update it as part of unrelated work' 'Repository instructions must protect the upstream submodule.'
 Assert-Contains 'AGENTS.md' 'Do not commit, push, deploy.*unless the user explicitly requests' 'Repository instructions must preserve user control over external changes.'
@@ -28,6 +33,19 @@ Assert-Contains 'skills\my-engineering\SKILL.md' 'Do not edit personal skills' '
 Assert-Contains 'skills\my-engineering\SKILL.md' '\$karpathy-guidelines.*writing, reviewing, or refactoring code' 'Code work must apply karpathy-guidelines.'
 Assert-Contains 'skills\karpathy-guidelines\SKILL.md' 'Every changed line should trace directly to the user''s request' 'Karpathy guidelines must require surgical changes.'
 Assert-Contains 'skills\karpathy-guidelines\SKILL.md' 'Define success criteria. Loop until verified' 'Karpathy guidelines must require verifiable outcomes.'
+
+. (Join-Path $root 'scripts\common.ps1')
+$originalCodexHome = $env:CODEX_HOME
+try {
+    $portableCodexHome = Join-Path $root '.portable-codex-home'
+    $env:CODEX_HOME = $portableCodexHome
+    Assert-Equal (Get-CodexSkillsPath) ([System.IO.Path]::GetFullPath((Join-Path $portableCodexHome 'skills'))) 'CODEX_HOME must control the deployment target.'
+
+    $env:CODEX_HOME = $null
+    Assert-Equal (Get-CodexSkillsPath) ([System.IO.Path]::GetFullPath((Join-Path $env:USERPROFILE '.codex\skills'))) 'Deployment must fall back to the user Codex directory.'
+} finally {
+    $env:CODEX_HOME = $originalCodexHome
+}
 
 if ($failures.Count -gt 0) {
     $failures | ForEach-Object { Write-Error $_ }

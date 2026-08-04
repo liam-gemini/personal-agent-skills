@@ -36,7 +36,7 @@ personal-agent-skills/
 │   ├── personal-engineering-principles/ # Cross-project engineering defaults
 │   └── evolve-my-skills/           # Reviewed learning from experience
 ├── upstream/mattpocock-skills/     # Pinned upstream Git submodule
-├── config/skills.json              # Upstream version, skill set, deployment target
+├── config/skills.json              # Upstream version and personal skill set
 ├── lessons/                        # Candidate lessons and promoted-rule lifecycle records
 ├── scripts/                        # Creation, validation, deployment, update, rollback
 ├── tests/                          # Behavioral scenarios and checks
@@ -72,13 +72,14 @@ git submodule update --init --recursive
 
 ### 2. Check the configuration
 
-The default deployment target is the current Windows user's Codex skills directory:
+Deployment uses `$CODEX_HOME` when set and otherwise falls back to the current Windows user's Codex directory:
 
 ```text
-C:/Users/<username>/.codex/skills
+$CODEX_HOME/skills
+→ $USERPROFILE/.codex/skills
 ```
 
-On another machine, first update `deployment.codexSkillsPath` in [`config/skills.json`](./config/skills.json).
+Shared configuration normally requires no machine-specific edit. Set `CODEX_HOME` before running a script when another Codex profile directory is required.
 
 ### 3. Validate
 
@@ -183,7 +184,6 @@ This keeps upstream improvements available without allowing unreviewed changes t
 - Track a few practical signals such as rework, missed requirements, task duration, and manual corrections.
 - Regularly remove duplicate or obsolete rules so skills do not only grow.
 - Record the source, applicability boundary, and last validation date for important rules.
-- Separate machine-specific deployment paths from shared configuration for easier multi-device use.
 - Add CI once the workflow stabilizes so validation and behavioral checks run on commits or pull requests.
 - Keep personal skills small and composable; create a new skill only for a genuinely recurring workflow.
 

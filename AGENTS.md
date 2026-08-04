@@ -30,6 +30,7 @@ These instructions apply to the entire repository. More specific instructions in
 ## Upstream, deployment, and rollback
 
 - Review upstream changes with `scripts/review-upstream-update.ps1` before applying them.
+- Resolve the Codex installation from `$CODEX_HOME`, falling back to `$USERPROFILE/.codex`. Do not add machine-specific absolute deployment paths to shared configuration.
 - Preview deployment and rollback commands before using `-Apply`.
 - Do not commit, push, deploy, apply an upstream update, or perform a rollback unless the user explicitly requests that action.
 

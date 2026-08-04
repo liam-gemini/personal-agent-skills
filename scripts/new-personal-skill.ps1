@@ -13,7 +13,7 @@ $root = Get-RepositoryRoot
 $configPath = Join-Path $root 'config\skills.json'
 $config = Get-SkillsConfig
 $personalRoot = Join-Path $root $config.personal.skillsPath
-$init = Join-Path $env:USERPROFILE '.codex\skills\.system\skill-creator\scripts\init_skill.py'
+$init = Join-Path (Get-CodexHomePath) 'skills\.system\skill-creator\scripts\init_skill.py'
 $prompt = if ($DefaultPrompt -match [regex]::Escape("`$$Name")) { $DefaultPrompt } else { "Use `$$Name $DefaultPrompt" }
 
 $arguments = @(

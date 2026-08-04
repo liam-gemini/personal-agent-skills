@@ -36,7 +36,7 @@ personal-agent-skills/
 │   ├── personal-engineering-principles/ # 跨项目工程原则
 │   └── evolve-my-skills/           # 从经验教训中审核并演化 Skills
 ├── upstream/mattpocock-skills/     # 固定版本的上游 Git submodule
-├── config/skills.json              # 上游版本、个人 Skills 和部署位置
+├── config/skills.json              # 上游版本与个人 Skills 清单
 ├── lessons/                        # 经验候选与已晋升规则的生命周期记录
 ├── scripts/                        # 创建、验证、部署、更新和回滚工具
 ├── tests/                          # 行为场景与检查脚本
@@ -72,13 +72,14 @@ git submodule update --init --recursive
 
 ### 2. 检查配置
 
-默认部署目标是当前 Windows 用户的 Codex Skill 目录：
+部署脚本优先使用 `$CODEX_HOME`；未设置时回退到当前 Windows 用户的 Codex 目录：
 
 ```text
-C:/Users/<用户名>/.codex/skills
+$CODEX_HOME/skills
+→ $USERPROFILE/.codex/skills
 ```
 
-首次在另一台机器使用时，请把 [`config/skills.json`](./config/skills.json) 中的 `deployment.codexSkillsPath` 改成实际路径。
+通常不需要修改共享配置。如果需要使用另一个 Codex 配置目录，请在运行脚本前设置 `CODEX_HOME`。
 
 ### 3. 验证
 
@@ -183,7 +184,6 @@ C:/Users/<用户名>/.codex/skills
 - 用少量真实指标评估效果，例如返工次数、遗漏率、任务耗时和人工纠正次数。
 - 定期清理重复或过时规则，避免 Skill 只增不减。
 - 为重要规则记录来源、适用边界和最后验证日期。
-- 将机器相关的部署路径从共享配置中分离，降低跨设备使用成本。
 - 在稳定后增加 CI，在提交或 Pull Request 中自动运行验证和行为检查。
 - 保持个人 Skill 小而可组合；只有重复出现的工作流才值得抽象成新 Skill。
 

@@ -35,7 +35,7 @@ foreach ($skill in $skills | Where-Object Kind -eq 'personal') {
         $errors.Add("default_prompt does not mention `$$($skill.Name)")
     }
 
-    $validator = Join-Path $env:USERPROFILE '.codex\skills\.system\skill-creator\scripts\quick_validate.py'
+    $validator = Join-Path (Get-CodexHomePath) 'skills\.system\skill-creator\scripts\quick_validate.py'
     & python $validator $skill.Source
     if ($LASTEXITCODE -ne 0) {
         $errors.Add("quick_validate.py failed for $($skill.Name)")

@@ -16,7 +16,6 @@
     ]
   },
   "deployment": {
-    "codexSkillsPath": "C:/Users/16477/.codex/skills",
     "backupPath": "backups"
   }
 }
