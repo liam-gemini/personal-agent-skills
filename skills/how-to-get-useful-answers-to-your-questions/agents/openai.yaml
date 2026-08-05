@@ -1,0 +1,4 @@
+interface:
+  display_name: "How to Get Useful Answers"
+  short_description: "Steer conversations toward useful answers"
+  default_prompt: "Use $how-to-get-useful-answers-to-your-questions to steer this conversation toward a useful answer."

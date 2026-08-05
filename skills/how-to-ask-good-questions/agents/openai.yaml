@@ -1,0 +1,4 @@
+interface:
+  display_name: "How to Ask Good Questions"
+  short_description: "Turn vague confusion into precise questions"
+  default_prompt: "Use $how-to-ask-good-questions to turn this confusion into a clear, answerable question."

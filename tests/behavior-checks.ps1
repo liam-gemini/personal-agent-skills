@@ -28,6 +28,7 @@ Assert-Contains 'AGENTS.md' 'Match process depth to task complexity' 'Repository
 Assert-Contains 'AGENTS.md' 'Apply `\$karpathy-guidelines` when writing, reviewing, or refactoring code' 'Repository code work must apply karpathy-guidelines.'
 Assert-Contains 'AGENTS.md' 'Report unrelated problems without fixing them' 'Repository instructions must preserve unrelated scope.'
 Assert-Contains 'AGENTS.md' '\$my-engineering.*owns end-to-end engineering lifecycle progression and route selection' 'Repository instructions must assign delivery authority to my-engineering.'
+Assert-Contains 'AGENTS.md' 'Keep reusable source notes with their owning Skill under `references/`' 'Repository instructions must keep deployable knowledge with its skill.'
 Assert-Contains 'skills\grill-my-design\SKILL.md' 'Ask exactly one decision question per turn' 'grill-my-design must ask one decision at a time.'
 Assert-Contains 'skills\grill-my-design\SKILL.md' 'Do not implement until the user explicitly confirms' 'grill-my-design must wait for shared understanding.'
 Assert-Contains 'skills\grill-my-design\SKILL.md' 'Discover facts from the environment' 'grill-my-design must investigate facts.'
@@ -48,6 +49,14 @@ Assert-Contains 'skills\my-engineering\references\delivery-workflow.md' 'Commit,
 Assert-Contains 'skills\my-engineering\references\workflow-routing.md' 'Concrete, trivial, reversible change.*Direct Build -> Verify -> Deliver' 'Routing must provide a lightweight path for trivial changes.'
 Assert-Contains 'skills\karpathy-guidelines\SKILL.md' 'Every changed line should trace directly to the user''s request' 'Karpathy guidelines must require surgical changes.'
 Assert-Contains 'skills\karpathy-guidelines\SKILL.md' 'Define success criteria. Loop until verified' 'Karpathy guidelines must require verifiable outcomes.'
+Assert-Contains 'skills\how-to-ask-good-questions\SKILL.md' 'current understanding' 'Question drafting must expose the user''s current model.'
+Assert-Contains 'skills\how-to-ask-good-questions\SKILL.md' 'exhaustive research' 'Question drafting must not gatekeep help behind exhaustive research.'
+Assert-Contains 'skills\how-to-ask-good-questions\references\article-notes.md' 'Questions identify undocumented knowledge' 'The asking knowledge notes must preserve questions as contributions.'
+Assert-Contains 'skills\how-to-get-useful-answers-to-your-questions\SKILL.md' 'What remains unanswered' 'Answer steering must isolate the unresolved gap.'
+Assert-Contains 'skills\how-to-get-useful-answers-to-your-questions\SKILL.md' 'Interrupt politely' 'Answer steering must support constructive interruption.'
+Assert-Contains 'skills\how-to-get-useful-answers-to-your-questions\references\article-notes.md' 'Do not equate response length or confidence with resolution' 'The answer knowledge notes must reject impressive non-answers.'
+Assert-Contains 'knowledge-base\questioning\README.md' 'How to ask good questions' 'The questioning knowledge base must index the first source.'
+Assert-Contains 'knowledge-base\questioning\README.md' 'How to get useful answers to your questions' 'The questioning knowledge base must index the second source.'
 
 . (Join-Path $root 'scripts\common.ps1')
 $originalCodexHome = $env:CODEX_HOME

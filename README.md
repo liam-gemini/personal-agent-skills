@@ -33,9 +33,12 @@ personal-agent-skills/
 ├── skills/                         # 我维护的个人 Skills（源码）
 │   ├── my-engineering/             # 自适应端到端工程交付工作流
 │   ├── grill-my-design/            # 个性化的软件设计追问与压力测试
+│   ├── how-to-ask-good-questions/  # 把模糊困惑整理成可回答的问题
+│   ├── how-to-get-useful-answers-to-your-questions/ # 主动引导对话获得有效答案
 │   ├── karpathy-guidelines/        # 简洁、克制、可验证的代码实现准则
 │   ├── personal-engineering-principles/ # 跨项目工程原则
 │   └── evolve-my-skills/           # 从经验教训中审核并演化 Skills
+├── knowledge-base/                 # 跨 Skills 的署名知识索引
 ├── upstream/mattpocock-skills/     # 固定版本的上游 Git submodule
 ├── config/skills.json              # 上游版本与个人 Skills 清单
 ├── lessons/                        # 经验候选与已晋升规则的生命周期记录
@@ -50,6 +53,8 @@ personal-agent-skills/
 | --- | --- | --- |
 | `my-engineering` | 从理解现场到验证交付，按任务复杂度组合最小必要的工程 Skills | `$my-engineering` |
 | `grill-my-design` | 基于仓库证据、领域建模和个人原则追问并检验设计 | `$grill-my-design` |
+| `how-to-ask-good-questions` | 明确目标、当前理解与未知点，把模糊困惑整理成容易回答的问题 | `$how-to-ask-good-questions` 或由 Codex 自动调用 |
+| `how-to-get-useful-answers-to-your-questions` | 从冗长、跑题或难懂的回答中提取事实，并生成聚焦的后续问题 | `$how-to-get-useful-answers-to-your-questions` 或由 Codex 自动调用 |
 | `karpathy-guidelines` | 在编写、评审或重构代码时避免过度设计，保持改动聚焦并定义可验证目标 | 由 Codex 自动调用，也可使用 `$karpathy-guidelines` |
 | `personal-engineering-principles` | 在工程建议和权衡中自动应用稳定的跨项目偏好 | 通常由 Codex 自动调用 |
 | `evolve-my-skills` | 捕获、审核并在确认后晋升可复用的经验教训 | `$evolve-my-skills` |
@@ -65,6 +70,10 @@ Orient -> Align -> Shape -> Build -> Verify -> Review -> Deliver -> Learn
 ```
 
 阶段是门槛而不是固定仪式：明确的小改动可以走 `Orient -> Build -> Verify -> Deliver`；复杂或高风险工作才进入完整的对齐、规划和评审阶段。具体 Skill 在被调用期间拥有其内部流程，`$my-engineering` 负责阶段推进、路线选择和完成判断。
+
+### 提问与答案知识库
+
+[`knowledge-base/questioning/`](./knowledge-base/questioning/README.md) 统一索引 Julia Evans 两篇文章的结构化知识笔记。笔记与对应 Skill 放在一起，确保部署到 Codex 后仍可按需读取；知识库只保存署名总结和原文链接，不复制完整文章。
 
 ## 快速开始
 

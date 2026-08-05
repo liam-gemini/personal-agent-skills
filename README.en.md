@@ -33,9 +33,12 @@ personal-agent-skills/
 ├── skills/                         # Personal skill source maintained here
 │   ├── my-engineering/             # Adaptive end-to-end engineering delivery workflow
 │   ├── grill-my-design/            # Personalized design interrogation
+│   ├── how-to-ask-good-questions/  # Turn vague confusion into answerable questions
+│   ├── how-to-get-useful-answers-to-your-questions/ # Steer conversations toward useful answers
 │   ├── karpathy-guidelines/        # Simple, surgical, verifiable coding discipline
 │   ├── personal-engineering-principles/ # Cross-project engineering defaults
 │   └── evolve-my-skills/           # Reviewed learning from experience
+├── knowledge-base/                 # Attributed knowledge indexes across skills
 ├── upstream/mattpocock-skills/     # Pinned upstream Git submodule
 ├── config/skills.json              # Upstream version and personal skill set
 ├── lessons/                        # Candidate lessons and promoted-rule lifecycle records
@@ -50,6 +53,8 @@ personal-agent-skills/
 | --- | --- | --- |
 | `my-engineering` | Composes the minimum engineering skills needed from repository orientation through verified delivery | `$my-engineering` |
 | `grill-my-design` | Stress-tests a design using repository evidence, domain modeling, and personal principles | `$grill-my-design` |
+| `how-to-ask-good-questions` | Clarifies goals, current understanding, and unknowns to turn vague confusion into answerable questions | `$how-to-ask-good-questions` or automatic Codex invocation |
+| `how-to-get-useful-answers-to-your-questions` | Extracts facts from broad, off-topic, or confusing responses and creates focused follow-ups | `$how-to-get-useful-answers-to-your-questions` or automatic Codex invocation |
 | `karpathy-guidelines` | Avoids overengineering, keeps changes surgical, and defines verifiable goals when writing, reviewing, or refactoring code | Invoked automatically by Codex or explicitly with `$karpathy-guidelines` |
 | `personal-engineering-principles` | Applies stable cross-project preferences to engineering recommendations and trade-offs | Usually invoked automatically by Codex |
 | `evolve-my-skills` | Captures, reviews, and promotes reusable lessons after explicit approval | `$evolve-my-skills` |
@@ -65,6 +70,10 @@ Orient -> Align -> Shape -> Build -> Verify -> Review -> Deliver -> Learn
 ```
 
 Phases are gates rather than fixed ceremony: a concrete small change can take `Orient -> Build -> Verify -> Deliver`, while complex or high-risk work retains alignment, shaping, and review. Invoked skills own their internal procedures; `$my-engineering` owns lifecycle progression, route selection, and completion judgment.
+
+### Questioning knowledge base
+
+[`knowledge-base/questioning/`](./knowledge-base/questioning/README.md) indexes structured knowledge notes from two Julia Evans articles. Notes stay with their owning skills so Codex can load them after deployment. The knowledge base contains attributed summaries and original links rather than copies of the complete articles.
 
 ## Quick start
 

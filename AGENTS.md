@@ -19,6 +19,7 @@ These instructions apply to the entire repository. More specific instructions in
 - Include `agents/openai.yaml`, and make its `default_prompt` mention the skill as `$skill-name`.
 - Keep personal skills small and composable. Add a new skill only for a recurring workflow.
 - When explicitly invoked, `$my-engineering` owns end-to-end engineering lifecycle progression and route selection; an invoked specialist skill owns only its internal procedure.
+- Keep reusable source notes with their owning Skill under `references/`; use `knowledge-base/` for attributed indexes across Skills rather than duplicating source material.
 - Update both `README.md` and `README.en.md` when the documented skill set or operating workflow changes.
 
 ## Collaboration discipline

@@ -49,3 +49,19 @@ Use $my-engineering to add organization-level roles to an existing multi-tenant 
 ```
 
 Inspect whether it orients from repository evidence, aligns the material authorization decisions, shapes an appropriately staged route, defines verification before implementation, and retains Review because the change is high risk.
+
+## Ask a good question
+
+```text
+Use $how-to-ask-good-questions. I want to ask our database maintainer why this query is slow, but all I have is "joins are confusing" and an execution plan showing a sequential scan.
+```
+
+Inspect whether it identifies the user's goal and current model, isolates a factual unknown, retains only answer-changing context, and returns a ready-to-send question without requiring exhaustive prior research.
+
+## Get a useful answer
+
+```text
+Use $how-to-get-useful-answers-to-your-questions. I asked whether deployment blocks database migrations, but received a long explanation of our CI provider that never answered the ordering question.
+```
+
+Inspect whether it preserves facts actually established, identifies the unanswered ordering question, and produces a polite bounded follow-up that redirects the conversation.
